@@ -97,9 +97,9 @@
             // btConsulta
             // 
             this.btConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btConsulta.Location = new System.Drawing.Point(36, 46);
+            this.btConsulta.Location = new System.Drawing.Point(37, 46);
             this.btConsulta.Name = "btConsulta";
-            this.btConsulta.Size = new System.Drawing.Size(182, 24);
+            this.btConsulta.Size = new System.Drawing.Size(181, 24);
             this.btConsulta.TabIndex = 35;
             this.btConsulta.Text = "Consulta";
             this.btConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,7 +209,7 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Fecha";
             // 
-            // RInscripcion
+            // rInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,7 +232,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "RInscripcion";
+            this.Name = "rInscripciones";
             this.Text = "RInscripcion";
             this.ResumeLayout(false);
             this.PerformLayout();

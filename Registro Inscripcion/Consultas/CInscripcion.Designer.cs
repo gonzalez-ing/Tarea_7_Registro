@@ -1,4 +1,4 @@
-﻿namespace Registro_Inscripciones.Consultas
+﻿namespace Registro_Inscripcion.Consultas
 {
     partial class CInscripciones
     {
@@ -108,7 +108,7 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // cInscripciones
+            // CInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,8 +120,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filterCombobox);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "cInscripciones";
+            this.Name = "CInscripciones";
             this.Text = "CInscripcion";
+            this.Load += new System.EventHandler(this.CInscripciones_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

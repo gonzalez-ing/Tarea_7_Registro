@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Registro_Inscripcion.BLL;
 using Registro_Inscripcion.Entidades;
 
-namespace Registro_Inscripciones.Consultas
+namespace Registro_Inscripcion.Consultas
 {
     public partial class CInscripciones : Form
     {
@@ -87,6 +87,11 @@ namespace Registro_Inscripciones.Consultas
         }
 
         private void CInscripciones_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CInscripciones_Load_2(object sender, EventArgs e)
         {
 
         }

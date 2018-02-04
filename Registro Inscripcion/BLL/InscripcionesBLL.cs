@@ -10,7 +10,7 @@ using Registro_Inscripcion.Entidades;
 
 namespace Registro_Inscripcion.BLL
 {
-    class InscripcionesBLL
+    public class InscripcionesBLL
     {
         public static bool Guardar(Inscripciones inscrip)
         {
@@ -19,7 +19,7 @@ namespace Registro_Inscripcion.BLL
             {
                 InscripcionesDb db = new InscripcionesDb();
 
-                db.Inscripciones.Add(inscrip);
+                db.Inscripcion.Add(inscrip);
                 db.SaveChanges();
                 flag = true;
             }
@@ -38,7 +38,7 @@ namespace Registro_Inscripcion.BLL
             {
                 InscripcionesDb db = new InscripcionesDb();
 
-                inscripcion = db.Inscripciones.Find(inscripId);
+                inscripcion = db.Inscripcion.Find(inscripId);
             }
             catch (Exception)
             {
@@ -80,7 +80,7 @@ namespace Registro_Inscripcion.BLL
                 InscripcionesDb db = new InscripcionesDb();
 
                 inscripcion = Buscar(inscripId);
-                db.Inscripciones.Remove(inscripcion);
+                db.Inscripcion.Remove(inscripcion);
                 db.SaveChanges();
 
                 flag = true;
@@ -100,7 +100,7 @@ namespace Registro_Inscripcion.BLL
             {
                 InscripcionesDb db = new InscripcionesDb();
 
-                lista = db.Inscripciones.Where(filter).ToList();
+                lista = db.Inscripcion.Where(filter).ToList();
             }
             catch (Exception)
             {
