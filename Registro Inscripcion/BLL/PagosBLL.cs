@@ -13,15 +13,15 @@ namespace Registro_Inscripcion.BLL
 {
    public class PagosBLL
     {
-        public static bool Guardar(Pago pago)
+        public static bool Guardar(Pagos pago)
         {
             bool estado = false;
             if (pago != null)
             {
                 try
                 {
-                    PagosDb context = new PagosDb();
-                    context.pagos.Add(context);
+                    EstudiantesDb context = new EstudiantesDb();
+                    context.pagos.Add(pago);
                     context.SaveChanges();
                     estado = true;
 
@@ -35,13 +35,13 @@ namespace Registro_Inscripcion.BLL
             return estado;
         }
 
-        public static Pago Buscar(int Id)
+        public static Pagos Buscar(int Id)
         {
-            Pago estudiantes = new Pago();
+            Pagos pagos = new Pagos();
             try
             {
-                PagosDb context = new PagosDb();
-                estudiantes = context.Pagos.Find(Id);
+                EstudiantesDb context = new EstudiantesDb();
+                pagos = context.pagos.Find(Id);
 
             }
             catch (Exception)
@@ -49,13 +49,13 @@ namespace Registro_Inscripcion.BLL
                 throw;
             }
 
-            return estudiantes;
+            return pagos;
 
         }
 
         public static bool eliminar(int Id)
         {
-            Pago pago = null;
+            Pagos pago = null;
             bool estado = false;
             try
             {
@@ -81,8 +81,8 @@ namespace Registro_Inscripcion.BLL
 
             try
             {
-                PagosDb db = new PagosDb();
-                lista = db.Pagos.Where(filter).ToList();
+                EstudiantesDb db = new EstudiantesDb();
+                lista = db.pagos.Where(filter).ToList();
             }
             catch (Exception)
             {

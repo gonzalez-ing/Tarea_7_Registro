@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Registro_Inscripcion.Entidades;
 using Registro_Inscripcion.BLL;
+using RegistroPago.Entidades;
 
 namespace Registro_Incripcion.Registro
 {
@@ -31,7 +32,7 @@ namespace Registro_Incripcion.Registro
 
         private void GuardarbuttonP_Click(object sender, EventArgs e)
         {
-            Pago pago = LlenaClase();
+            Pagos pago = LlenaClase();
             if (PagosBLL.Guardar(pago))
             {
                 VaciarCampos();
@@ -44,9 +45,9 @@ namespace Registro_Incripcion.Registro
 
         }
 
-        private Pago LlenaClase()
+        private Pagos LlenaClase()
         {
-            Pago pago = new PagoR();
+            Pagos pago = new Pagos();
             float pagoText = float.Parse(PagotextBoxP.Text);
             float montoText = float.Parse(MontotextBox.Text);
             if (pagoText <= montoText)
@@ -70,7 +71,7 @@ namespace Registro_Incripcion.Registro
 
         private void BuscarbuttonP_Click(object sender, EventArgs e)
         {
-            Pago pago = LlenarCampos();
+            Pagos pago = LlenarCampos();
 
 
 
@@ -88,15 +89,15 @@ namespace Registro_Incripcion.Registro
             }
             else
             {
-                Nombrelabel.Text = estudiantes.Nombre;
+                Nombrelabel.Text = estudiantes.Nombres;
             }
         }
 
-        private Pago LlenarCampos()
+        private Pagos LlenarCampos()
         {
             int Id = 0;
             Id = Decimal.ToInt32(IDnumericUpDownP.Value);
-            PagoR pago = PagosBLL.Buscar(Id);
+            Pagos pago = PagosBLL.Buscar(Id);
             if (pago == null)
             {
                 MessageBox.Show("No se encontro el pago");
@@ -110,7 +111,7 @@ namespace Registro_Incripcion.Registro
                 BalancetextBox.Text = Convert.ToString(pago.Balance);
                 ObservacionestextBoxP.Text = pago.Observaciones;
                 Estudiantes estudiantes = EstudiantesBLL.Buscar(pago.IdEstudiante);
-                Nombrelabel.Text = estudiantes.Nombre;
+                Nombrelabel.Text = estudiantes.Nombres;
 
             }
 
@@ -150,6 +151,11 @@ namespace Registro_Incripcion.Registro
         }
 
         private void FormCreatePago_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPago_Load(object sender, EventArgs e)
         {
 
         }

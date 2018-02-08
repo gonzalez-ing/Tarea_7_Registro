@@ -248,6 +248,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormPago";
             this.Text = "FormPago";
+            this.Load += new System.EventHandler(this.FormPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdEstudiantesnumericUpDownP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDownP)).EndInit();
             this.ResumeLayout(false);

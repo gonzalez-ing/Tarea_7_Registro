@@ -17,7 +17,7 @@ namespace Registro_Inscripcion.BLL
             bool flag = false;
             try
             {
-                InscripcionesDb db = new InscripcionesDb();
+                EstudiantesDb db = new EstudiantesDb();
 
                 db.Inscripcion.Add(inscrip);
                 db.SaveChanges();
@@ -36,7 +36,7 @@ namespace Registro_Inscripcion.BLL
             Inscripciones inscripcion = null;
             try
             {
-                InscripcionesDb db = new InscripcionesDb();
+                EstudiantesDb db = new EstudiantesDb();
 
                 inscripcion = db.Inscripcion.Find(inscripId);
             }
@@ -54,7 +54,7 @@ namespace Registro_Inscripcion.BLL
             bool flag = false;
             try
             {
-                InscripcionesDb db = new InscripcionesDb();
+                EstudiantesDb db = new EstudiantesDb();
 
                 db.Entry(inscrip).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
@@ -77,7 +77,7 @@ namespace Registro_Inscripcion.BLL
 
             try
             {
-                InscripcionesDb db = new InscripcionesDb();
+                EstudiantesDb db = new EstudiantesDb();
 
                 inscripcion = Buscar(inscripId);
                 db.Inscripcion.Remove(inscripcion);
@@ -98,7 +98,7 @@ namespace Registro_Inscripcion.BLL
             List<Inscripciones> lista = null;
             try
             {
-                InscripcionesDb db = new InscripcionesDb();
+                EstudiantesDb db = new EstudiantesDb();
 
                 lista = db.Inscripcion.Where(filter).ToList();
             }

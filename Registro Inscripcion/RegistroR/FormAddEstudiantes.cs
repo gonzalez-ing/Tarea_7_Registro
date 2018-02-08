@@ -4,7 +4,7 @@ using System;
 using System.Windows.Forms;
 
 
-namespace RegistroPago.Registro
+namespace Registro_Inscripcion.Registro
 {
     public partial class FormAddEstudiantes : Form
     {
@@ -41,7 +41,7 @@ namespace RegistroPago.Registro
         {
             Estudiantes estudiantes = new Estudiantes();
             estudiantes.IdEstudiante = 0;
-            estudiantes.Nombre = NombretextBox.Text;
+            estudiantes.Nombres = NombrestextBox.Text;
             estudiantes.Direccion = DirecciontextBox.Text;
             estudiantes.Carrerra = CarreratextBox.Text;
             estudiantes.FechaN = FechaNdateTimePicker.Value;
@@ -68,7 +68,7 @@ namespace RegistroPago.Registro
             else
             {
 
-                NombretextBox.Text = estudiantes.Nombre;
+                NombretextBox.Text = estudiantes.Nombres;
                 DirecciontextBox.Text = estudiantes.Direccion;
                 CarreratextBox.Text = estudiantes.Carrerra;
                 FechaNdateTimePicker.Value = estudiantes.FechaN.Value;
@@ -120,9 +120,9 @@ namespace RegistroPago.Registro
 
             try
             {
-                estudiantes.Nombre = NombretextBox.Text;
+                estudiantes.Nombres = NombretextBox.Text;
                 estudiantes.Direccion = DirecciontextBox.Text;
-                estudiantes.Carrerra = CarreratextBox.Text;
+                estudiantes.Carrera = CarreratextBox.Text;
                 estudiantes.FechaN = FechaNdateTimePicker.Value;
                 if (EstudiantesBLL.Editar(estudiantes))
                 {

@@ -77,8 +77,6 @@
       <DependentUpon>CInscripcion.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\EstudianteDb.cs" />
-    <Compile Include="DAL\InscripcionesDb.cs" />
-    <Compile Include="DAL\PagosDb.cs" />
     <Compile Include="Entidades\Estudiante.cs" />
     <Compile Include="Entidades\Inscripciones.cs" />
     <Compile Include="Entidades\Pagos.cs" />
